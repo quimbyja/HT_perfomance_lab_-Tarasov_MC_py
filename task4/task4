@@ -1,0 +1,12 @@
+data = []
+with open("task4/numbers.txt") as f:
+    for line in f:
+        data.append([int(x) for x in line.split()])
+
+a = []
+for i in range(len(data)):
+    c = 0
+    a.append(data[i][c])
+
+m = sorted(a)[len(a) // 2]
+print(sum(abs(v - m) for v in a))
